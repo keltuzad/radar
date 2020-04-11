@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="css/canvas.css" type="text/css">
+    <style>
+
+      .controlPanel {
+        color: white;
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+
+      button {
+        cursor: pointer;
+      }
+
+      #cheatButtons, #menuController {
+        margin: 10px;
+      }
+    </style>
+    <meta charset="utf-8"/>
+  </head>
+  <body>
+    <canvas class="canvas" id="cnv" width="100%" height="100%">
+      Canvas is not supported by your browser
+    </canvas>
+    <div class="controlPanel">
+      <div id="menuController">
+        <button id="menuSwitcher">Hide</button>
+      </div>
+      <div id="cheatButtons">
+        <span>Current mode: </span><button id="changeModeButton">Radar</button><br/><br/>
+        <span>Background: </span><button id="changeBackground">Black</button><br/><br/>
+        <span>Draw icons: </span><button id="drawIcons">Yes</button><br/><br/>
+        <span>Big icons: </span><button id="bigIcons">No</button><br/><br/>
+        <span>Rotate map: </span><button id="rotateMap">Yes</button><br/><br/>
+        <span>Loot price: </span><input id="lootPrice" value="40000" type="number"/><br/><br/>
+        <span>Zoom: </span><button id="zoomPlus">+</button><button id="zoomMinus">-</button><br/><br/>
+
+      </div>
+    </div>
+
+    <script src="https://git.io/glm-js.min.js"></script>
+    <script src="js/iconsProvider.js"></script>
+    <script src="js/projection.js"></script>
+    <script src="js/items.js"></script>
+    <script src="js/itemsDB.js"></script>
+    <script src="js/dataProvider.js"></script>
+    <script src="js/render.js"></script>
+  </body>
+</html>
