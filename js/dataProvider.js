@@ -174,7 +174,13 @@ function registerChanges(changes) {
 
 let lastPacketTime = null;
 
-const ws = new WebSocket('ws://192.168.88.230:3000');
+let ip = '127.0.0.1';
+
+if (window.location.href.indexOf('#') != -1) {
+  ip = window.location.href.split('#')[1];
+}
+
+const ws = new WebSocket(`ws://${ip}:3000`);
 ws.onmessage = (e) => {
   const now = Date.now();
   if (lastPacketTime === null) {
